@@ -37,9 +37,6 @@ function getLogin() {
             if (username == logins[i].username && password == logins[i].password) {
                 document.getElementById("username").value = "";
                 document.getElementById("password").value = "";
-                document.getElementById("check-true").style.display = "block";
-                document.getElementById("check-false").style.display = "none";
-                document.getElementById("check-username").innerHTML = username;
                 location.href = "index.html?username=" + logins[i].username + "&key=" + logins[i].key;
                 return;
             }
@@ -48,7 +45,6 @@ function getLogin() {
         document.getElementById("username").value = "";
         document.getElementById("password").value = "";
         document.getElementById("check-false").style.display = "block";
-        document.getElementById("check-true").style.display = "none";
         return;
     }
     if (username == "") {
