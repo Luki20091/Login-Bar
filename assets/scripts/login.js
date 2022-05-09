@@ -1,10 +1,12 @@
 let logins = [
     {
+        id: "1",
         key: "109b3ea6-3956-4520-9efa-004ad6554403",
         username: "admin",
         password: "haslo123"
     },
     {
+        id: "2",
         key: "cc9243b5-ab0b-4a1a-83f9-a1fd541d1e03",
         username: "admin2",
         password: "pączek"
@@ -37,7 +39,7 @@ function getLogin() {
             if (username == logins[i].username && password == logins[i].password) {
                 document.getElementById("username").value = "";
                 document.getElementById("password").value = "";
-                location.href = "https://luki20091.github.io/Login-Bar/index.html?username=" + logins[i].username + "&key=" + logins[i].key;
+                location.href = "https://luki20091.github.io/Login-Bar/index.html?username=" + logins[i].username + "&key=" + logins[i].key + "&id=" + logins[i].id;
                 return;
             }
         }
