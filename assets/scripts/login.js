@@ -37,7 +37,7 @@ function getLogin() {
             if (username == logins[i].username && password == logins[i].password) {
                 document.getElementById("username").value = "";
                 document.getElementById("password").value = "";
-                location.href = "index.html?username=" + logins[i].username + "&key=" + logins[i].key;
+                location.href = "https://luki20091.github.io/Login-Bar/index.html?username=" + logins[i].username + "&key=" + logins[i].key;
                 return;
             }
         }
