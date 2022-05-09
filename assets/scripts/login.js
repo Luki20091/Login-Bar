@@ -33,13 +33,27 @@ function getLogin() {
     if (username != "" && password != "") {
         for (var i = 0; i < logins.length; i++) {
             if (username == logins[i].username && password == logins[i].password) {
-                alert(username + " jest zalogowany");
-                window.location.reload();
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("check-true").style.display = "block";
+                document.getElementById("check-false").style.display = "none";
+                document.getElementById("check-username").innerHTML = username;
                 return;
             }
         }
-        alert("Nieprawidłowa nazwa użytkownika lub hasło");
+        document.getElementById("username").focus();
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("check-false").style.display = "block";
+        document.getElementById("check-true").style.display = "none";
         return;
     }
-    alert("Wypełnij formularz logowania");
+    if (username == "") {
+        document.getElementById("username").focus();
+        return;
+    }
+    if (password == "") {
+        document.getElementById("password").focus();
+        return;
+    }
 };
