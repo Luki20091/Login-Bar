@@ -79,6 +79,7 @@ function login() {
             var database_ref = database.ref()
 
             var user_data = {
+                email: email,
                 last_login: Date.now()
             }
 
