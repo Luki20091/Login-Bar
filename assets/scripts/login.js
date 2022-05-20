@@ -131,6 +131,7 @@ document.getElementById("register-leave").addEventListener("click", function (ev
 function login() {
     email = document.getElementById("login-email").value
     password = document.getElementById("login-password").value
+    confirmpassword = document.getElementById("login-password").value
 
     if (validate_email(email) == false || validate_password(password) == false) {
         document.getElementById("login-check-false").style.display = "block";
