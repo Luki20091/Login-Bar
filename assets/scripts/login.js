@@ -196,6 +196,7 @@ function login() {
                 document.getElementById("login-check-false").style.display = "none";
 
                 document.getElementById("logout").style.display = "block";
+                document.getElementById("row-center").style.display = "block";
                 document.getElementById("login").style.display = "none";
                 document.getElementById("login-leave").style.display = "none";
             });

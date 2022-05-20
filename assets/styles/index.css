@@ -73,8 +73,8 @@ p {
 }
 
 
-.row-center {
-    display: flex;
+#row-center {
+    display: none;
     flex-direction: row;
     width: 200.8px;
     justify-content: center;
