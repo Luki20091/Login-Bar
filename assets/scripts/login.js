@@ -106,6 +106,38 @@ document.getElementById("login-email").addEventListener("keypress", function (ev
     }
 });
 
+
+
+
+
+document.getElementById("register-username").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        register();
+    }
+});
+
+document.getElementById("register-email").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        register();
+    }
+});
+
+document.getElementById("register-password").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        register();
+    }
+});
+
+document.getElementById("register-confirm-password").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        register();
+    }
+});
+
+
+
+
+
 document.getElementById("login-visible-password").addEventListener("click", function (event) {
     loginVisiblePassword();
 });

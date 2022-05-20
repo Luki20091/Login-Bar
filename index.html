@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-    <title>Login-Bar | v0.4 reg & log</title>
+    <title>Login-Bar | v0.5</title>
 
     <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
     <script src="https://kit.fontawesome.com/ac1b82ff7f.js" crossorigin="anonymous"></script>
@@ -21,9 +21,9 @@
     </div>
     <form id="loginForm">
         <h1>Logowanie</h1>
-        <input type="email" id="login-email" placeholder="Email*" autocomplete="off" spellcheck="false">
+        <input type="email" id="login-email" placeholder="Email*" autocomplete="off" spellcheck="false" tabindex="1">
         <div class="password-div">
-            <input type="password" id="login-password" placeholder="Hasło*" autocomplete="off" spellcheck="false">
+            <input type="password" id="login-password" placeholder="Hasło*" autocomplete="off" spellcheck="false" tabindex="2">
             <button type="button" id="login-visible-password"><i id="login-visible-password-i" class="fa-solid fa-eye"></i></button>
         </div>
         <p id="login-check-false">Nieprawidłowe&nbsp;dane&nbsp;logowania...</p>
@@ -36,14 +36,14 @@
     </form>
     <form id="registerForm">
         <h1>Rejestracja</h1>
-        <input type="text" id="register-username" placeholder="Nazwa użytkownika*" autocomplete="off" spellcheck="false">
-        <input type="email" id="register-email" placeholder="Email*" autocomplete="off" spellcheck="false">
+        <input type="text" id="register-username" placeholder="Nazwa użytkownika*" autocomplete="off" spellcheck="false" tabindex="1">
+        <input type="email" id="register-email" placeholder="Email*" autocomplete="off" spellcheck="false" tabindex="2">
         <div class="password-div">
-            <input type="password" id="register-password" placeholder="Hasło*" autocomplete="off" spellcheck="false">
+            <input type="password" id="register-password" placeholder="Hasło*" autocomplete="off" spellcheck="false" tabindex="3">
             <button type="button" id="register-visible-password"><i id="register-visible-password-i" class="fa-solid fa-eye"></i></button>
         </div>
         <div class="password-div">
-            <input type="password" id="register-confirm-password" placeholder="Powtórz hasło*" autocomplete="off" spellcheck="false">
+            <input type="password" id="register-confirm-password" placeholder="Powtórz hasło*" autocomplete="off" spellcheck="false" tabindex="4">
             <button type="button" id="register-confirm-visible-password"><i id="register-confirm-visible-password-i" class="fa-solid fa-eye"></i></button>
         </div>
         <p id="register-check-false">Nieprawidłowe&nbsp;dane&nbsp;rejestracji...</p>
