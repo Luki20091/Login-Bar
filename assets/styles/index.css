@@ -19,9 +19,12 @@ form, #choose {
 
 form {
     display: none;
+    width: 200px;
 }
 
-
+input {
+    width: 200px;
+}
 
 input, button {
     all: unset;
@@ -68,7 +71,7 @@ p {
 .row {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 200px;
     justify-content: space-between;
 }
 
@@ -76,7 +79,7 @@ p {
 #row-center {
     display: none;
     flex-direction: row;
-    width: 100%;
+    width: 200px;
     justify-content: center;
 }
 
