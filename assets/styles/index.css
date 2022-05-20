@@ -73,6 +73,13 @@ p {
 }
 
 
+.row-center {
+    display: flex;
+    flex-direction: row;
+    width: 200.8px;
+    justify-content: center;
+}
+
 
 form > h1 {
     color: rgba(255, 255, 255, 0.70);
