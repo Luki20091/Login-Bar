@@ -1,10 +1,11 @@
 body {
     background-color: #121212;
     overflow: hidden;
+    font: 16px system-ui;
 }
 
 
-form {
+form, #choose {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,6 +13,12 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+
+form {
+    display: none;
 }
 
 
@@ -48,10 +55,47 @@ p {
     padding: 0;
     margin: 0;
     display: none;
-    font: 16px system-ui;
 }
 
 
 #logout {
     display: none;
+}
+
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 200.8px;
+    justify-content: space-between;
+}
+
+
+
+form > h1 {
+    color: rgba(255, 255, 255, 0.70);
+    margin: 0;
+}
+
+
+
+
+.password-div {
+    position: relative;
+}
+
+.password-div > button{
+    position: absolute;
+    top: -13px;
+    width: 17px;
+    right: 0;
+    background-color: transparent;
+}
+
+
+
+.password-div .eye-width {
+    right: 1px!important;
 }

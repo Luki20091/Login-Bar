@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-    <title>Login-Bar | v0.3 safe</title>
+    <title>Login-Bar | v0.4 reg & log</title>
 
     <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
     <script src="https://kit.fontawesome.com/ac1b82ff7f.js" crossorigin="anonymous"></script>
@@ -15,14 +15,43 @@
 
 
 <body>
-    <form>
-        <input type="email" id="email" placeholder="Email..." autocomplete="off" spellcheck="false">
-        <input type="password" id="password" placeholder="Hasło..." autocomplete="off" spellcheck="false">
-        <p id="check-false">*Nieprawidłowe&nbsp;dane&nbsp;logowania</p>
-        <p id="check-true"></p>
-        <button type="button" id="login"> Zaloguj się</button>
-        <button type="button" id="logout">Wyloguj się</button>
-        <!-- <button type="button" id="register">Zarejestruj się</button> -->
+    <div id="choose">
+        <button id="goto-login"><i class="fa-solid fa-lock"></i>&nbsp;Logowanie</button>
+        <button id="goto-register"><i class="fa-solid fa-circle-plus"></i>&nbsp;Rejestracja</button>
+    </div>
+    <form id="loginForm">
+        <h1>Logowanie</h1>
+        <input type="email" id="login-email" placeholder="Email*" autocomplete="off" spellcheck="false">
+        <div class="password-div">
+            <input type="password" id="login-password" placeholder="Hasło*" autocomplete="off" spellcheck="false">
+            <button type="button" id="login-visible-password"><i id="login-visible-password-i" class="fa-solid fa-eye"></i></button>
+        </div>
+        <p id="login-check-false">Nieprawidłowe&nbsp;dane&nbsp;logowania...</p>
+        <p id="login-check-true"></p>
+        <div class="row">
+            <button type="button" id="login-leave"><i class="fa-solid fa-circle-arrow-left"></i></button>
+            <button type="button" id="login"><i class="fa-solid fa-lock-open"></i>&nbsp;Zaloguj&nbsp;się</button>
+            <button type="button" id="logout"><i class="fa-solid fa-lock"></i>&nbsp;Wyloguj&nbsp;się</button>
+        </div>
+    </form>
+    <form id="registerForm">
+        <h1>Rejestracja</h1>
+        <input type="text" id="register-username" placeholder="Nazwa użytkownika*" autocomplete="off" spellcheck="false">
+        <input type="email" id="register-email" placeholder="Email*" autocomplete="off" spellcheck="false">
+        <div class="password-div">
+            <input type="password" id="register-password" placeholder="Hasło*" autocomplete="off" spellcheck="false">
+            <button type="button" id="register-visible-password"><i id="register-visible-password-i" class="fa-solid fa-eye"></i></button>
+        </div>
+        <div class="password-div">
+            <input type="password" id="register-confirm-password" placeholder="Powtórz hasło*" autocomplete="off" spellcheck="false">
+            <button type="button" id="register-confirm-visible-password"><i id="register-confirm-visible-password-i" class="fa-solid fa-eye"></i></button>
+        </div>
+        <p id="register-check-false">Nieprawidłowe&nbsp;dane&nbsp;rejestracji...</p>
+        <p id="register-check-true"></p>
+        <div class="row">
+            <button type="button" id="register-leave"><i class="fa-solid fa-circle-arrow-left"></i></button>
+            <button type="button" id="register"><i class="fa-solid fa-circle-plus"></i>&nbsp;Zarejestruj&nbsp;się</button>
+        </div>
     </form>
 </body>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
