@@ -68,7 +68,7 @@ p {
 .row {
     display: flex;
     flex-direction: row;
-    width: 200.8px;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -76,7 +76,7 @@ p {
 #row-center {
     display: none;
     flex-direction: row;
-    width: 200.8px;
+    width: 100%;
     justify-content: center;
 }
 
