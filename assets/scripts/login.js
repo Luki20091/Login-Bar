@@ -47,7 +47,7 @@ function register() {
     password = document.getElementById("register-password").value
     confirmpassword = document.getElementById("register-confirm-password").value
 
-    if (validate_email(email) == false || validate_password(password) == false) {
+    if (validate_email(email) == false || validate_register_password(password) == false) {
         document.getElementById("register-check-false").style.display = "block";
         document.getElementById("register-check-true").style.display = "none";
         document.getElementById("register-email").value = "";
@@ -220,12 +220,21 @@ function validate_email(email) {
     }
 }
 
-function validate_password(password) {
+function validate_register_password(password) {
     if (password < 6) {
         return false
     }
 
     if (password != confirmpassword) {
+        return false
+    }
+    else {
+        return true
+    }
+}
+
+function validate_password(password) {
+    if (password < 6) {
         return false
     }
     else {
