@@ -50,8 +50,8 @@ function register() {
     if (validate_email(email) == false || validate_register_password(password) == false) {
         document.getElementById("register-check-false").style.display = "block";
         document.getElementById("register-check-true").style.display = "none";
-        document.getElementById("register-email").value = "";
         document.getElementById("register-confirm-password").value = "";
+        document.getElementById("register-confirm-password").focus();
         return
     }
 
@@ -81,7 +81,7 @@ function register() {
         .catch((error) => {
             document.getElementById("register-check-false").style.display = "block";
             document.getElementById("register-check-true").style.display = "none";
-            document.getElementById("register-email").value = "";
+            document.getElementById("register-confirm-password").focus();
             return
         });
 }
@@ -169,6 +169,7 @@ function login() {
         document.getElementById("login-check-false").style.display = "block";
         document.getElementById("login-check-true").style.display = "none";
         document.getElementById("login-password").value = "";
+        document.getElementById("login-password").focus();
         return
     }
 
@@ -206,6 +207,7 @@ function login() {
             document.getElementById("login-check-false").style.display = "block";
             document.getElementById("login-check-true").style.display = "none";
             document.getElementById("login-password").value = "";
+            document.getElementById("login-password").focus();
             return
         });
 }
@@ -222,6 +224,7 @@ function loginVisiblePassword() {
     document.getElementById("login-visible-password-i").classList.toggle("fa-eye");
     document.getElementById("login-visible-password").classList.toggle("eye-width");
     document.getElementById("login-visible-password-i").classList.toggle("fa-eye-slash");
+    document.getElementById("login-password").focus();
 };
 
 
@@ -232,6 +235,7 @@ function registerVisiblePassword() {
     document.getElementById("register-visible-password-i").classList.toggle("fa-eye");
     document.getElementById("register-visible-password").classList.toggle("eye-width");
     document.getElementById("register-visible-password-i").classList.toggle("fa-eye-slash");
+    document.getElementById("register-password").focus();
 };
 function registerConfirmVisiblePassword() {
     const type = document.getElementById("register-confirm-password").getAttribute("type") === "password" ? "text" : "password";
@@ -240,6 +244,7 @@ function registerConfirmVisiblePassword() {
     document.getElementById("register-confirm-visible-password-i").classList.toggle("fa-eye");
     document.getElementById("register-confirm-visible-password").classList.toggle("eye-width");
     document.getElementById("register-confirm-visible-password-i").classList.toggle("fa-eye-slash");
+    document.getElementById("register-confirm-password").focus();
 };
 
 
